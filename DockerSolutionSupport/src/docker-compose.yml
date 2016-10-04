@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  dockersolutionsupport:
+    image: user/dockersolutionsupport
+    build:
+      context: .
+      dockerfile: DockerSolutionSupport/Dockerfile
+    ports:
+      - "80"
+  webapi:
+    image: user/webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+    ports:
+      - "80"

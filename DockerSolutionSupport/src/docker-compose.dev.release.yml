@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  dockersolutionsupport:
+    volumes:
+      - ~/clrdbg:/clrdbg:ro
+    entrypoint: tail -f /dev/null
+    labels:
+      - "com.microsoft.visualstudio.targetoperatingsystem=linux"
+      - "com.microsoft.visualstudio.projectpath=DockerSolutionSupport/DockerSolutionSupport.xproj"
+  webapi:
+    volumes:
+      - ~/clrdbg:/clrdbg:ro
+    entrypoint: tail -f /dev/null
+    labels:
+      - "com.microsoft.visualstudio.targetoperatingsystem=linux"
+      - "com.microsoft.visualstudio.projectpath=WebApi/WebApi.xproj"

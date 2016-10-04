@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  webapi:
+    image: user/webapi:dev
+    build:
+      args:
+        source: obj/Docker/empty/
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+    volumes:
+      - .:/app
+      - ~/.nuget/packages:/root/.nuget/packages:ro
+      - ~/clrdbg:/clrdbg:ro
+    entrypoint: tail -f /dev/null
+    labels:
+      - "com.microsoft.visualstudio.targetoperatingsystem=linux"
+      - "com.microsoft.visualstudio.projectpath=WebApi.xproj"
