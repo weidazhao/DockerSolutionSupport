@@ -5,7 +5,7 @@ services:
     image: user/dockersolutionsupport:dev
     build:
       args:
-        source: ./DockerSolutionSupport/obj/Docker/empty/
+        source: obj/Docker/empty/
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_USE_POLLING_FILE_WATCHER=1
@@ -21,7 +21,7 @@ services:
     image: user/webapi:dev
     build:
       args:
-        source: ./WebApi/obj/Docker/empty/
+        source: obj/Docker/empty/
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_USE_POLLING_FILE_WATCHER=1

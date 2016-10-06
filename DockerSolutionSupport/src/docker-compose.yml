@@ -4,14 +4,14 @@ services:
   dockersolutionsupport:
     image: user/dockersolutionsupport
     build:
-      context: .
-      dockerfile: DockerSolutionSupport/Dockerfile
+      context: DockerSolutionSupport
+      dockerfile: Dockerfile
     ports:
       - "80"
   webapi:
     image: user/webapi
     build:
-      context: .
-      dockerfile: WebApi/Dockerfile
+      context: WebApi
+      dockerfile: Dockerfile
     ports:
       - "80"
