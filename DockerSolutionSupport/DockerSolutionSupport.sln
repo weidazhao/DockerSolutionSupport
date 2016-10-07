@@ -11,14 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{77B9267C-531
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{148D107D-1C4A-412C-AA87-5349825D3251}"
 	ProjectSection(SolutionItems) = preProject
+		docker-compose.dev.debug.yml = docker-compose.dev.debug.yml
+		docker-compose.dev.release.yml = docker-compose.dev.release.yml
+		docker-compose.yml = docker-compose.yml
 		global.json = global.json
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{411C63C8-0C17-4EC7-B4A9-6A977C078F58}"
-	ProjectSection(SolutionItems) = preProject
-		src\docker-compose.dev.debug.yml = src\docker-compose.dev.debug.yml
-		src\docker-compose.dev.release.yml = src\docker-compose.dev.release.yml
-		src\docker-compose.yml = src\docker-compose.yml
 	EndProjectSection
 EndProject
 Global

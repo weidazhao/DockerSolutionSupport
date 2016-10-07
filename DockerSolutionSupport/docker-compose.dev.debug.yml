@@ -10,13 +10,12 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_USE_POLLING_FILE_WATCHER=1
     volumes:
-      - ./DockerSolutionSupport:/app
+      - ./src/DockerSolutionSupport:/app
       - ~/.nuget/packages:/root/.nuget/packages:ro
       - ~/clrdbg:/clrdbg:ro
     entrypoint: tail -f /dev/null
     labels:
       - "com.microsoft.visualstudio.targetoperatingsystem=linux"
-      - "com.microsoft.visualstudio.projectpath=DockerSolutionSupport/DockerSolutionSupport.xproj"
   webapi:
     image: user/webapi:dev
     build:
@@ -26,10 +25,9 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_USE_POLLING_FILE_WATCHER=1
     volumes:
-      - ./WebApi:/app
+      - ./src/WebApi:/app
       - ~/.nuget/packages:/root/.nuget/packages:ro
       - ~/clrdbg:/clrdbg:ro
     entrypoint: tail -f /dev/null
     labels:
       - "com.microsoft.visualstudio.targetoperatingsystem=linux"
-      - "com.microsoft.visualstudio.projectpath=WebApi/WebApi.xproj"
