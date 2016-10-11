@@ -15,3 +15,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80"
+  consoleapp1:
+    image: user/consoleapp1
+    build:
+      context: src/ConsoleApp1
+      dockerfile: Dockerfile
