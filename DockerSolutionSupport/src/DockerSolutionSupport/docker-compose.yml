@@ -4,7 +4,7 @@ services:
   dockersolutionsupport:
     image: user/dockersolutionsupport
     build:
-      context: .
+      context: ./${DOCKER_PUBLISH_OUTPUT}
       dockerfile: Dockerfile
     ports:
       - "80"

@@ -4,19 +4,19 @@ services:
   dockersolutionsupport:
     image: user/dockersolutionsupport
     build:
-      context: src/DockerSolutionSupport
+      context: src/DockerSolutionSupport/${DOCKER_PUBLISH_OUTPUT}
       dockerfile: Dockerfile
     ports:
       - "80"
   webapi:
     image: user/webapi
     build:
-      context: src/WebApi
+      context: src/WebApi/${DOCKER_PUBLISH_OUTPUT}
       dockerfile: Dockerfile
     ports:
       - "80"
   consoleapp1:
     image: user/consoleapp1
     build:
-      context: src/ConsoleApp1
+      context: src/ConsoleApp1/${DOCKER_PUBLISH_OUTPUT}
       dockerfile: Dockerfile

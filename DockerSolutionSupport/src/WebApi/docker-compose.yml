@@ -4,7 +4,7 @@ services:
   webapi:
     image: user/webapi
     build:
-      context: .
+      context: ./${DOCKER_PUBLISH_OUTPUT}
       dockerfile: Dockerfile
     ports:
       - "80"
