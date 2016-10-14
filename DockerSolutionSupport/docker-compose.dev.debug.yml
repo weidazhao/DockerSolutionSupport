@@ -3,9 +3,6 @@ version: '2'
 services:
   dockersolutionsupport:
     image: user/dockersolutionsupport:dev
-    build:
-      args:
-        source: obj/Docker/empty/
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_USE_POLLING_FILE_WATCHER=1
@@ -18,9 +15,6 @@ services:
       - "com.microsoft.visualstudio.targetoperatingsystem=linux"
   webapi:
     image: user/webapi:dev
-    build:
-      args:
-        source: obj/Docker/empty/
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_USE_POLLING_FILE_WATCHER=1
@@ -33,9 +27,6 @@ services:
       - "com.microsoft.visualstudio.targetoperatingsystem=linux"
   consoleapp1:
     image: user/consoleapp1:dev
-    build:
-      args:
-        source: obj/Docker/empty/
     volumes:
       - ./src/ConsoleApp1:/app
       - ~/.nuget/packages:/root/.nuget/packages:ro

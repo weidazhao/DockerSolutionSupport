@@ -3,9 +3,6 @@ version: '2'
 services:
   webapi:
     image: user/webapi:dev
-    build:
-      args:
-        source: obj/Docker/empty/
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_USE_POLLING_FILE_WATCHER=1

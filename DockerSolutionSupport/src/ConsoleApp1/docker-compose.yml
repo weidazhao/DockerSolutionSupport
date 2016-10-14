@@ -4,5 +4,7 @@ services:
   consoleapp1:
     image: user/consoleapp1
     build:
-      context: ./${DOCKER_PUBLISH_OUTPUT}
+      context: .
       dockerfile: Dockerfile
+      args:
+          source: ${DOCKER_BUILD_SOURCE}
